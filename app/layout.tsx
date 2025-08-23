@@ -1,17 +1,22 @@
+import ContextProvider from "@/config/provider";
 import "./globals.css";
-import { Roboto, Geist } from "next/font/google";
+import { Geist } from "next/font/google";
+import { headers } from "next/headers";
 
-const roboto = Roboto({});
 const geist = Geist({});
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersObj = await headers();
+  const cookies = headersObj.get("cookie");
   return (
     <html lang="en" className={geist.className}>
-      <body className="bg-slate-900">{children}</body>
+      <body className="bg-slate-900">
+        <ContextProvider cookies={cookies}>{children}</ContextProvider>
+      </body>
     </html>
   );
 }

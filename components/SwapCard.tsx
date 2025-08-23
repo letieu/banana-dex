@@ -138,7 +138,7 @@ const SwapCard: React.FC = () => {
         </div>
 
         <div className="mt-2">
-          <button className="w-full bg-yellow-900/20 hover:from-yellow-500 hover:to-yellow-600 text-slate-900 font-bold py-3 rounded-2xl text-xl transition-all duration-300 shadow-lg hover:shadow-yellow-400/40 text-yellow-500">
+          <button className="w-full bg-yellow-900/20 hover:bg-yellow-900/40 font-semibold py-3 rounded-2xl text-xl transition-all duration-300 shadow-md text-yellow-500">
             Swap
           </button>
         </div>

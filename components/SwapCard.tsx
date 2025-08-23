@@ -69,12 +69,8 @@ const SwapCard: React.FC = () => {
 
   return (
     <>
-      <div className="w-full max-w-md bg-slate-800/50 backdrop-blur-2xl border border-white/10 rounded-3xl p-6 shadow-2xl transition-all duration-300">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-white">Swap</h2>
-          <button className="text-gray-400 hover:text-white transition-colors">
-            <SettingsIcon className="w-6 h-6" />
-          </button>
+      <div className="w-full max-w-md bg-slate-800/50 backdrop-blur-md rounded-3xl p-1 shadow-2xl transition-all duration-300">
+        <div className="flex justify-end items-center">
         </div>
 
         <div className="relative">
@@ -95,7 +91,7 @@ const SwapCard: React.FC = () => {
               />
               <button
                 onClick={() => handleOpenModal("from")}
-                className="flex items-center bg-slate-700 hover:bg-slate-600 transition-colors p-2 rounded-full min-w-[120px]"
+                className="flex items-center bg-slate-700 hover:bg-slate-600 transition-colors p-1 rounded-full min-w-[120px]"
               >
                 <span className="w-7 h-7">{fromToken.icon}</span>
                 <span className="mx-2 font-bold">{fromToken.symbol}</span>
@@ -131,7 +127,7 @@ const SwapCard: React.FC = () => {
               />
               <button
                 onClick={() => handleOpenModal("to")}
-                className="flex items-center bg-slate-700 hover:bg-slate-600 transition-colors p-2 rounded-full min-w-[120px]"
+                className="flex items-center bg-slate-700 hover:bg-slate-600 transition-colors p-1 rounded-full min-w-[120px]"
               >
                 <span className="w-7 h-7">{toToken.icon}</span>
                 <span className="mx-2 font-bold">{toToken.symbol}</span>
@@ -141,8 +137,8 @@ const SwapCard: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-6">
-          <button className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-slate-900 font-bold py-4 rounded-2xl text-xl transition-all duration-300 shadow-lg hover:shadow-yellow-400/40">
+        <div className="mt-2">
+          <button className="w-full bg-yellow-900/20 hover:from-yellow-500 hover:to-yellow-600 text-slate-900 font-bold py-3 rounded-2xl text-xl transition-all duration-300 shadow-lg hover:shadow-yellow-400/40 text-yellow-500">
             Swap
           </button>
         </div>

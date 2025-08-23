@@ -24,7 +24,7 @@ const features = [
 
 const FeaturesGrid: React.FC = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <div className="w-full max-w-7xl mx-auto mt-[80px] lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         {features.map((feature) => (
           <div key={feature.title} className="bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 transform hover:-translate-y-2 transition-transform duration-300">

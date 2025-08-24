@@ -6,10 +6,9 @@ import SwapCard from "@/components/SwapCard";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden bg-slate-900 text-white">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-state-700 text-white">
       {/* Grid Background */}
 
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
       <div className="relative z-10 flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow flex flex-col items-center justify-start p-4">

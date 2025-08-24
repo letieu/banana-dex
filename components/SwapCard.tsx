@@ -4,7 +4,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import type { Token } from "../types";
 import { TOKENS } from "../constants";
 import { ChevronDownIcon } from "./icons/ChevronDownIcon";
-import { SettingsIcon } from "./icons/SettingsIcon";
 import { ArrowDownIcon } from "./icons/ArrowDownIcon";
 import TokenSelectorModal from "./TokenSelectorModal";
 

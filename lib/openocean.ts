@@ -4,7 +4,7 @@ const getUrl = (chainId: number, endpoint: string) => {
   return `https://open-api.openocean.finance/v4/${chainId}/${endpoint}`;
 };
 
-export const REFER_ADDRESS = "0x8fc0fd5AD6a540a8db86E8B22e4b7355005d57a8";
+export const REFER_ADDRESS = "0xEBf3E1bee8b3D17C075C52276F92cfaCf215B935";
 export const REFER_PERCENT = 3; // 3%
 
 export type TokenInfo = {

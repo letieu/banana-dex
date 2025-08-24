@@ -1,24 +1,24 @@
 
 import React from 'react';
-import { LightningIcon } from './icons/LightningIcon';
 import { ShieldCheckIcon } from './icons/ShieldCheckIcon';
 import { TrendingUpIcon } from './icons/TrendingUpIcon';
+import { GlobeIcon } from './icons/GlobeIcon';
 
 const features = [
   {
-    icon: <LightningIcon className="w-10 h-10 text-yellow-400" />,
-    title: 'Lightning-Fast Swaps',
-    description: 'Our optimized routing finds the best prices and executes trades in the blink of an eye.',
+    icon: <TrendingUpIcon className="w-10 h-10 text-yellow-400" />,
+    title: 'Best Rates, Every Time',
+    description: 'Smart routing algorithm scans thousands of liquidity sources across multiple chains to find you the most efficient path and best possible price for every swap.',
+  },
+  {
+    icon: <GlobeIcon className="w-10 h-10 text-yellow-400" />,
+    title: 'Vast Multi-Chain Support',
+    description: 'Seamlessly trade assets across dozens of supported blockchains, including Ethereum, BNB Chain, Polygon, Arbitrum, and many more. Your gateway to the entire crypto ecosystem.',
   },
   {
     icon: <ShieldCheckIcon className="w-10 h-10 text-yellow-400" />,
     title: 'Rock-Solid Security',
-    description: 'Trade with confidence. Our smart contracts are audited and your funds are always non-custodial.',
-  },
-  {
-    icon: <TrendingUpIcon className="w-10 h-10 text-yellow-400" />,
-    title: 'Deep Liquidity',
-    description: 'Access deep liquidity pools for minimal slippage across all your favorite token pairs.',
+    description: 'Trade with confidence. Smart contracts are audited and your funds are always non-custodial.',
   },
 ];
 

@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
         BananaDEX
       </h1>
       <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-300">
-        The Sweetest Swaps in DeFi. Lightning-fast, secure, and low-fee token swaps.
+        The ultimate cross-chain swap experience. Find the best routes for lightning-fast trades on all your favorite networks.
       </p>
     </div>
   );

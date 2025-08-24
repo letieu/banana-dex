@@ -1,0 +1,40 @@
+export const CHAIN_NATIVE_TOKEN: Record<number, string> = {
+  1: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Ethereum
+  56: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // BNB Chain
+  324: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // zkSync Era
+  137: "0x0000000000000000000000000000000000001010", // Polygon
+  8453: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Base
+  59144: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Linea
+  250: "0x0000000000000000000000000000000000000000", // Fantom
+  43114: "0x0000000000000000000000000000000000000000", // Avalanche C-Chain
+  42161: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Arbitrum One
+  10: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Optimism
+  1285: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Moonriver
+  1313161554: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Aurora
+  25: "0x0000000000000000000000000000000000000000", // Cronos
+  1666600000: "0x0000000000000000000000000000000000000000", // Harmony
+  2222: "0x0000000000000000000000000000000000000000", // Kava
+  1088: "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000", // Metis Andromeda
+  42220: "0x471EcE3750Da237f93B8E339c536989b8978a438", // Celo
+  40: "0x0000000000000000000000000000000000000000", // Telos
+  1101: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Polygon zkEVM
+  100: "0x0000000000000000000000000000000000000000", // Gnosis
+  204: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // opBNB
+  5000: "0x0000000000000000000000000000000000000000", // Mantle
+  169: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Manta
+  534352: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Scroll
+  81457: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Blast
+  34443: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Mode
+  30: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Rootstock
+  1329: "0x0000000000000000000000000000000000000000", // Sei
+  1625: "0x0000000000000000000000000000000000000000", // Gravity
+  33139: "0x0000000000000000000000000000000000000000", // Apechain
+  146: "0x0000000000000000000000000000000000000000", // Sonic
+  80094: "0x0000000000000000000000000000000000000000", // Berachain
+  10143: "0x0000000000000000000000000000000000000000", // Monad Testnet
+  130: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // UniChain
+  14: "0x0000000000000000000000000000000000000000", // Flare
+  1923: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", // Swell
+  999: "0x0000000000000000000000000000000000000000", // HyperEVM
+  98866: "0x0000000000000000000000000000000000000000", // Plume
+};

@@ -3,7 +3,32 @@
 import { wagmiAdapter, projectId } from "@/config";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createAppKit } from "@reown/appkit/react";
-import { mainnet, arbitrum } from "@reown/appkit/networks";
+import {
+  mainnet,
+  arbitrum,
+  monadTestnet,
+  opBNB,
+  zksync,
+  polygon,
+  base,
+  linea,
+  fantom,
+  avalanche,
+  optimism,
+  moonriver,
+  aurora,
+  cronos,
+  celo,
+  telos,
+  polygonZkEvm,
+  bsc,
+  mantle,
+  manta,
+  blast,
+  mode,
+  rootstock,
+  sei,
+} from "@reown/appkit/networks";
 import React, { type ReactNode } from "react";
 import { cookieToInitialState, WagmiProvider, type Config } from "wagmi";
 
@@ -23,10 +48,35 @@ const metadata = {
 };
 
 // Create the modal
-const modal = createAppKit({
+createAppKit({
   adapters: [wagmiAdapter],
   projectId,
-  networks: [mainnet, arbitrum],
+  networks: [
+    mainnet,
+    arbitrum,
+    monadTestnet,
+    opBNB,
+    zksync,
+    polygon,
+    base,
+    linea,
+    fantom,
+    avalanche,
+    optimism,
+    moonriver,
+    aurora,
+    cronos,
+    celo,
+    telos,
+    polygonZkEvm,
+    bsc,
+    mantle,
+    manta,
+    blast,
+    mode,
+    rootstock,
+    sei,
+  ],
   defaultNetwork: mainnet,
   metadata: metadata,
   features: {

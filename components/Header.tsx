@@ -7,8 +7,8 @@ export default function Header() {
     <HeaderClient>
       <div className="flex items-center space-x-2">
         <BananaIcon className="h-12 w-12 text-yellow-600" />
-        <span className="text-xl font-bold tracking-wider text-white">
-          BananaDEX
+        <span className="text-md md:text-xl font-bold tracking-wider text-white">
+          BananaSwap
         </span>
       </div>
       <ConnectButton />

@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import TokenSelectorModal from "./TokenSelectorModal";
 import TokenInput from "./TokenInput";
 import SwapDirectionButton from "./SwapDirectionButton";
 import { useSwap } from "../lib/hooks/useSwap";
 import { useAppKit, useAppKitAccount } from "@reown/appkit/react";
-import { TokenInfo } from "@/lib/openocean";
 import { useTokenList } from "@/lib/hooks/useTokenList";
 
 const SwapCard: React.FC = () => {

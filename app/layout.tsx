@@ -3,6 +3,7 @@ import "./globals.css";
 import { Geist } from "next/font/google";
 import { headers } from "next/headers";
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geist = Geist({});
 
@@ -123,6 +124,7 @@ export default async function RootLayout({
       <body className="bg-slate-900">
         <ContextProvider cookies={cookies}>{children}</ContextProvider>
       </body>
+      <GoogleAnalytics gaId="G-ETE6VMHFRQ" />
     </html>
   );
 }

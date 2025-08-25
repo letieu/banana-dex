@@ -22,9 +22,9 @@ export default function HeaderClient({
       }`}
     >
       <nav
-        className={`w-full max-w-7xl mx-auto flex items-center justify-between p-4 transition-all duration-200 ${
+        className={`w-full max-w-7xl mx-auto flex items-center justify-between px-2 md:p-3 transition-all duration-200 ${
           scrolled
-            ? "bg-white/5 backdrop-blur-md border border-white/10 rounded-b-4xl shadow-lg"
+            ? "bg-white/5 backdrop-blur-md border border-white/10 rounded-b-xl shadow-lg"
             : "bg-transparent border-none shadow-none"
         }`}
       >

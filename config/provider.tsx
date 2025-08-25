@@ -41,10 +41,10 @@ if (!projectId) {
 
 // Set up metadata
 const metadata = {
-  name: "appkit-example",
-  description: "AppKit Example",
-  url: "https://appkitexampleapp.com", // origin must match your domain & subdomain
-  icons: ["https://avatars.githubusercontent.com/u/179229932"],
+  name: "BananaSwap",
+  description: "BananaSwap",
+  url: "https://bnnswap.com",
+  icons: ["https://bnnswap.com/banana.png"],
 };
 
 // Create the modal

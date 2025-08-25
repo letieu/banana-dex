@@ -38,14 +38,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://bananaswap.com"),
+  metadataBase: new URL("https://bnnswap.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://bananaswap.com",
+    url: "https://bnnswap.com",
     siteName: "BananaSwap",
     title: "BananaSwap - Cross-Chain DEX | Best Rates Across 40+ Blockchains",
     description:

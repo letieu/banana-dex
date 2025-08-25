@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
     name: "BananaSwap",
     description:
       "The ultimate cross-chain decentralized exchange for swapping tokens across 40+ blockchains",
-    url: "https://bananaswap.com",
+    url: "https://bnnswap.com",
     applicationCategory: "FinanceApplication",
     operatingSystem: "Web Browser",
     offers: {
@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       "Non-custodial trading",
       "Real-time price updates",
     ],
-    screenshot: "https://bananaswap.com/screenshot.png",
+    screenshot: "https://bnnswap.com/screenshot.png",
     softwareVersion: "1.0.0",
     author: {
       "@type": "Organization",

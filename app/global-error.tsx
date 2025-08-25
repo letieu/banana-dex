@@ -69,13 +69,13 @@ export default function GlobalError({
                   Discord (Priority)
                 </a>
                 <a 
-                  href="mailto:emergency@bananaswap.com"
+                  href="mailto:letieu8@gmail.com"
                   className="text-red-400 hover:text-red-300"
                 >
                   Emergency Email
                 </a>
                 <a 
-                  href="https://status.bananaswap.com"
+                  href="https://status.bnnswap.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-red-400 hover:text-red-300"

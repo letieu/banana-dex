@@ -87,7 +87,7 @@ export default function Error({
               Discord Support
             </a>
             <a
-              href="mailto:support@bananaswap.com"
+              href="mailto:support@bnnswap.com"
               className="text-yellow-400 hover:text-yellow-300"
             >
               Email Support

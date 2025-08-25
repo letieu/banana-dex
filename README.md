@@ -1,4 +1,4 @@
-# 🍌 BananaSwap - Cross-Chain DEX
+# 🍌 BnnSwap - Cross-Chain DEX
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.5.0-black)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.1.0-blue)](https://reactjs.org/)
@@ -6,7 +6,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-blue)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**BananaSwap** is the ultimate cross-chain decentralized exchange that enables users to swap tokens across 40+ blockchains with the best rates, lightning-fast trades, and rock-solid security.
+**BnnSwap** is the ultimate cross-chain decentralized exchange that enables users to swap tokens across 40+ blockchains with the best rates, lightning-fast trades, and rock-solid security.
 
 ## ✨ Features
 
@@ -44,7 +44,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/banana-dex.git
+   git clone https://github.com/your-username/bnn-dex.git
    cd banana-dex
    ```
 
@@ -64,8 +64,8 @@
    
    Add your configuration:
    ```env
-   NEXT_PUBLIC_APP_NAME=BananaSwap
-   NEXT_PUBLIC_APP_URL=https://bananaswap.com
+   NEXT_PUBLIC_APP_NAME=BnnSwap
+   NEXT_PUBLIC_APP_URL=https://bnnswap.com
    NEXT_PUBLIC_OPENOCEAN_API_URL=https://open-api.openocean.finance
    ```
 
@@ -150,10 +150,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🆘 Support
 
-- **Documentation**: [docs.bananaswap.com](https://docs.bananaswap.com)
-- **Discord**: [discord.gg/bananaswap](https://discord.gg/bananaswap)
-- **Twitter**: [@bananaswap](https://twitter.com/bananaswap)
-- **Email**: support@bananaswap.com
+- **Documentation**: [docs.bnnswap.com](https://docs.bnnswap.com)
+- **Discord**: [discord.gg/bnnswap](https://discord.gg/bnnswap)
+- **Twitter**: [@bnnswap](https://twitter.com/bnnswap)
+- **Email**: support@bnnswap.com
 
 ## 🙏 Acknowledgments
 
@@ -164,6 +164,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ by the BananaSwap Team**
+**Built with ❤️ by the BnnSwap Team**
 
 *Swap smarter, not harder* 🍌

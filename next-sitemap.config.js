@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://bananaswap.com',
+  siteUrl: process.env.SITE_URL || 'https://bnnswap.com',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: [
@@ -27,7 +27,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://bananaswap.com/sitemap.xml',
+      'https://bnnswap.com/sitemap.xml',
     ],
   },
   changefreq: 'daily',

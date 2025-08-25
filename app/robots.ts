@@ -13,7 +13,7 @@ export default function robots(): MetadataRoute.Robots {
         '/static/',
       ],
     },
-    sitemap: 'https://bananaswap.com/sitemap.xml',
-    host: 'https://bananaswap.com',
+    sitemap: 'https://bnnswap.com/sitemap.xml',
+    host: 'https://bnnswap.com',
   }
 }

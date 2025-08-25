@@ -1,4 +1,4 @@
-# 🚀 BananaSwap SEO Checklist
+# 🚀 BnnSwap SEO Checklist
 
 ## ✅ Đã hoàn thành
 

@@ -5,7 +5,7 @@ const getUrl = (chainId: number, endpoint: string) => {
 };
 
 export const REFER_ADDRESS = "0xEBf3E1bee8b3D17C075C52276F92cfaCf215B935";
-export const REFER_PERCENT = 3; // 3%
+export const REFER_PERCENT = 1; // 1%
 
 export type TokenInfo = {
   address: string;

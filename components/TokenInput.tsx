@@ -28,7 +28,6 @@ const TokenInput: React.FC<TokenInputProps> = ({
     >
       <div className="flex justify-between items-center mb-1">
         <span className="text-sm text-gray-400">{label}</span>
-        <span className="text-sm text-gray-400">Balance: 0.00</span>
       </div>
       <div className="flex justify-between items-center">
         <input

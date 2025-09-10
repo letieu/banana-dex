@@ -9,9 +9,27 @@ import { wagmiConfig } from "@/config";
 import { stringToColor } from "@/lib/utils";
 
 const erc20Abi = [
-  { constant: true, inputs: [], name: "name", outputs: [{ name: "", type: "string" }], type: "function" },
-  { constant: true, inputs: [], name: "symbol", outputs: [{ name: "", type: "string" }], type: "function" },
-  { constant: true, inputs: [], name: "decimals", outputs: [{ name: "", type: "uint8" }], type: "function" },
+  {
+    type: "function",
+    name: "name",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ type: "string", name: "" }],
+  },
+  {
+    type: "function",
+    name: "symbol",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ type: "string", name: "" }],
+  },
+  {
+    type: "function",
+    name: "decimals",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ type: "uint8", name: "" }],
+  },
 ] as const;
 
 interface TokenSelectorModalProps {
@@ -50,7 +68,9 @@ const TokenSelectorModal: React.FC<TokenSelectorModalProps> = ({
     setFoundToken(null);
 
     if (isAddress(term)) {
-      const tokenExists = tokens.find(t => t.address.toLowerCase() === term.toLowerCase());
+      const tokenExists = tokens.find(
+        (t) => t.address.toLowerCase() === term.toLowerCase(),
+      );
       if (tokenExists) {
         setFoundToken(tokenExists);
         return;
@@ -58,12 +78,16 @@ const TokenSelectorModal: React.FC<TokenSelectorModalProps> = ({
 
       setSearching(true);
       try {
-        const contract = { address: term as `0x${string}`, abi: erc20Abi, chainId };
+        const contract = {
+          address: term as `0x${string}`,
+          abi: erc20Abi,
+          chainId: chainId !== undefined ? Number(chainId) : undefined,
+        };
         const results = await readContracts(wagmiConfig, {
           contracts: [
-            { ...contract, functionName: 'name' },
-            { ...contract, functionName: 'symbol' },
-            { ...contract, functionName: 'decimals' },
+            { ...contract, functionName: "name" },
+            { ...contract, functionName: "symbol" },
+            { ...contract, functionName: "decimals" },
           ],
         });
 
@@ -91,7 +115,10 @@ const TokenSelectorModal: React.FC<TokenSelectorModalProps> = ({
   };
 
   const filteredTokens = useMemo(() => {
-    if (foundToken && foundToken.address.toLowerCase() === searchTerm.toLowerCase()) {
+    if (
+      foundToken &&
+      foundToken.address.toLowerCase() === searchTerm.toLowerCase()
+    ) {
       return [foundToken];
     }
     const lowercasedFilter = searchTerm.toLowerCase();
@@ -99,7 +126,7 @@ const TokenSelectorModal: React.FC<TokenSelectorModalProps> = ({
       (token) =>
         token.name.toLowerCase().includes(lowercasedFilter) ||
         token.symbol.toLowerCase().includes(lowercasedFilter) ||
-        token.address.toLowerCase().includes(lowercasedFilter)
+        token.address.toLowerCase().includes(lowercasedFilter),
     );
   }, [searchTerm, tokens, foundToken]);
 
@@ -143,7 +170,9 @@ const TokenSelectorModal: React.FC<TokenSelectorModalProps> = ({
         <div className="flex-grow overflow-y-auto max-h-[60vh] px-2 pb-4">
           {loading || searching ? (
             <div className="flex justify-center items-center h-full p-8">
-              <p className="text-gray-400">{searching ? `Searching for token...` : `Loading tokens...`}</p>
+              <p className="text-gray-400">
+                {searching ? `Searching for token...` : `Loading tokens...`}
+              </p>
             </div>
           ) : error ? (
             <div className="flex justify-center items-center h-full p-8">

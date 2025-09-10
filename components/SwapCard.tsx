@@ -77,7 +77,6 @@ const SwapCard: React.FC = () => {
         onSelectToken={handleTokenSelect}
         tokens={tokens}
         loading={!tokens.length}
-        error={null}
         addToken={addToken}
       />
     </>

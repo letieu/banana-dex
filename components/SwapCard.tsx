@@ -6,7 +6,7 @@ import TokenInput from "./TokenInput";
 import SwapDirectionButton from "./SwapDirectionButton";
 import { useSwap } from "../lib/hooks/useSwap";
 import { useAppKit, useAppKitAccount } from "@reown/appkit/react";
-import { useTokenList } from "@/lib/hooks/useTokenList";
+import SwapRoute from "./SwapRoute";
 
 const SwapCard: React.FC = () => {
   const {
@@ -17,6 +17,8 @@ const SwapCard: React.FC = () => {
     isModalOpen,
     loading,
     error,
+    swapPath,
+    tokens,
     handleOpenModal,
     handleTokenSelect,
     handleSwapTokens,
@@ -27,7 +29,6 @@ const SwapCard: React.FC = () => {
 
   const { isConnected } = useAppKitAccount();
   const { open } = useAppKit();
-  const { tokens, tokenLoading, error: loadTokenError } = useTokenList();
 
   return (
     <>
@@ -57,6 +58,8 @@ const SwapCard: React.FC = () => {
 
         {error && <p className="text-red-500 text-center mt-2 w-full max-h-[20any0px] overflow-scroll">{error}</p>}
 
+        <SwapRoute path={swapPath} fromToken={fromToken} toToken={toToken} tokens={tokens} />
+
         <div className="mt-2">
           <button
             onClick={() => (isConnected ? handleSwap() : open())}
@@ -72,8 +75,8 @@ const SwapCard: React.FC = () => {
         onClose={() => setIsModalOpen(false)}
         onSelectToken={handleTokenSelect}
         tokens={tokens}
-        loading={tokenLoading}
-        error={loadTokenError}
+        loading={!tokens.length}
+        error={null}
       />
     </>
   );

@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-3">
               <BananaIcon className="h-8 w-8 text-yellow-300" />
               <span className="text-xl font-bold tracking-wider text-white">
-                Banana DEX
+                Banana Swap
               </span>
             </div>
             <p className="mt-4 text-sm text-gray-400">
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-gray-400">
           <p>
-            &copy; {new Date().getFullYear()} Banana DEX. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Banana Swap. All Rights Reserved.
           </p>
         </div>
       </div>

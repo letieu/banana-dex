@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { getQuote, getSwapInfo, TokenInfo } from "../openocean";
+import { getQuote, getSwapInfo, TokenInfo, SwapPath } from "../openocean";
 import { formatUnits, parseUnits, type Address } from "viem";
 import {
   useAccount,
@@ -57,6 +57,7 @@ export const useSwap = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [isApproving, setIsApproving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [swapPath, setSwapPath] = useState<SwapPath | null>(null);
 
   const [txHash, setTxHash] = useState<`0x${string}` | undefined>();
   const { isLoading: isTxLoading, isSuccess: isTxSuccess } =
@@ -72,11 +73,13 @@ export const useSwap = () => {
       !chainId
     ) {
       setToAmount("");
+      setSwapPath(null);
       return;
     }
 
     setLoading(true);
     setError(null);
+    setSwapPath(null);
 
     try {
       const gasPrice = await getGasPrice(wagmiConfig);
@@ -94,6 +97,7 @@ export const useSwap = () => {
         setToAmount("");
       } else if (quote) {
         setToAmount(formatUnits(BigInt(quote.outAmount), toToken.decimals));
+        setSwapPath(quote.path);
       }
     } catch (e) {
       console.error(e);
@@ -270,6 +274,8 @@ export const useSwap = () => {
     error,
     isTxSuccess,
     txHash,
+    swapPath,
+    tokens,
     handleOpenModal,
     handleTokenSelect,
     handleSwapTokens,

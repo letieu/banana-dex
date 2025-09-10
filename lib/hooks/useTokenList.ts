@@ -33,6 +33,15 @@ export function useTokenList() {
     setTokenLoading(false);
   }, [chainId]);
 
+  const addToken = (token: TokenInfo) => {
+    const tokenExists = tokens.find(
+      (t) => t.address.toLowerCase() === token.address.toLowerCase(),
+    );
+    if (!tokenExists) {
+      setTokens([token, ...tokens]);
+    }
+  };
+
   useEffect(() => {
     fetchTokens();
   }, [chainId, fetchTokens]);
@@ -41,5 +50,6 @@ export function useTokenList() {
     tokens,
     tokenLoading,
     error,
+    addToken,
   };
 }

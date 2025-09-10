@@ -2,6 +2,7 @@
 import React from 'react';
 import { SwapPath, TokenInfo } from '@/lib/openocean';
 import { dexLogos } from '@/lib/dexLogos';
+import { stringToColor } from '@/lib/utils';
 
 interface SwapRouteProps {
   path: SwapPath | null;
@@ -10,27 +11,19 @@ interface SwapRouteProps {
   tokens: TokenInfo[];
 }
 
-const stringToColor = (str: string) => {
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    hash = str.charCodeAt(i) + ((hash << 5) - hash);
-  }
-  let color = '#';
-  for (let i = 0; i < 3; i++) {
-    const value = (hash >> (i * 8)) & 0xFF;
-    color += ('00' + value.toString(16)).substr(-2);
-  }
-  return color;
-};
-
 const renderSubRoutes = (subRoutes: any[], fromToken: TokenInfo | undefined, tokens: TokenInfo[]) => {
+  let lastToToken = fromToken;
+
   return subRoutes.map((subRoute: any, index: number) => {
-    const toToken = tokens.find(t => t.address.toLowerCase() === subRoute.to.toLowerCase());
+    const currentFromToken = lastToToken;
+    const currentToToken = tokens.find(t => t.address.toLowerCase() === subRoute.to.toLowerCase());
+    lastToToken = currentToToken;
+
     return (
       <div key={index} className="ml-4 pl-4 border-l border-slate-700">
         <div className="flex items-center mb-2">
           <span className="text-slate-400 text-sm">
-            {fromToken?.symbol} &rarr; {toToken?.symbol || 'Unknown'}
+            {currentFromToken?.symbol} &rarr; {currentToToken?.symbol || 'Unknown'}
           </span>
         </div>
         {subRoute.dexes.map((dex: any, dexIndex: number) => (
@@ -62,7 +55,7 @@ const SwapRoute: React.FC<SwapRouteProps> = ({ path, fromToken, toToken, tokens 
 
   return (
     <div className="mt-4 p-4 bg-slate-900/50 rounded-2xl">
-      <h3 className="text-lg font-semibold text-yellow-500 mb-3 text-center">Best Route</h3>
+      <h3 className="text-lg font-semibold text-yellow-500 mb-3 text-center">Best Route (Estimated)</h3>
       <div>
         <div className="flex items-center justify-between mb-2">
           <span className="text-base font-bold text-slate-200">

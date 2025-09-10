@@ -45,7 +45,7 @@ const erc20Abi = [
 export const useSwap = () => {
   const { address: userAddress } = useAccount();
   const { chainId } = useAppKitNetwork();
-  const { tokens } = useTokenList();
+  const { tokens, addToken } = useTokenList();
   const { writeContractAsync } = useWriteContract();
 
   const [fromToken, setFromToken] = useState<TokenInfo>();
@@ -241,27 +241,21 @@ export const useSwap = () => {
   };
 
   useEffect(() => {
-    setFromAmount("1");
-    setToAmount("");
+    if (fromToken || toToken || !chainId || tokens.length === 0) return;
 
-    if (chainId && tokens.length > 0) {
-      const nativeToken = tokens.find((token) =>
-        isNativeToken(token.address, +chainId),
-      );
-      setFromToken(nativeToken);
+    const nativeToken = tokens.find((token) =>
+      isNativeToken(token.address, +chainId),
+    );
+    setFromToken(nativeToken);
 
-      const usdtToken = tokens.find((token) => token.symbol === "USDT");
-      if (usdtToken) {
-        setToToken(usdtToken);
-      } else {
-        const usdcToken = tokens.find((token) => token.symbol === "USDC");
-        setToToken(usdcToken);
-      }
+    const usdtToken = tokens.find((token) => token.symbol === "USDT");
+    if (usdtToken) {
+      setToToken(usdtToken);
     } else {
-      setFromToken(undefined);
-      setToToken(undefined);
+      const usdcToken = tokens.find((token) => token.symbol === "USDC");
+      setToToken(usdcToken);
     }
-  }, [chainId, tokens]);
+  }, [chainId, tokens, fromToken, toToken]);
 
   return {
     fromToken,
@@ -276,6 +270,7 @@ export const useSwap = () => {
     txHash,
     swapPath,
     tokens,
+    addToken,
     handleOpenModal,
     handleTokenSelect,
     handleSwapTokens,
@@ -285,4 +280,3 @@ export const useSwap = () => {
     chainId,
   };
 };
-

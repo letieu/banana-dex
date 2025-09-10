@@ -19,6 +19,7 @@ const SwapCard: React.FC = () => {
     error,
     swapPath,
     tokens,
+    addToken,
     handleOpenModal,
     handleTokenSelect,
     handleSwapTokens,
@@ -77,6 +78,7 @@ const SwapCard: React.FC = () => {
         tokens={tokens}
         loading={!tokens.length}
         error={null}
+        addToken={addToken}
       />
     </>
   );

@@ -1,7 +1,7 @@
 import React from "react";
-import { ChevronDownIcon } from "./icons/ChevronDownIcon";
 import { TokenInfo } from "@/lib/openocean";
 import Image from "next/image";
+import { stringToColor } from "@/lib/utils";
 
 interface TokenInputProps {
   label: string;
@@ -43,13 +43,26 @@ const TokenInput: React.FC<TokenInputProps> = ({
           onClick={onTokenSelect}
           className="flex items-center bg-slate-700 hover:bg-slate-600 transition-colors p-1 rounded-full min-w-[120px]"
         >
-          <Image
-            width={32}
-            height={32}
-            className="w-7 h-7 rounded-full"
-            src={token?.icon || "https://placehold.co/600x400"}
-            alt="icon"
-          />
+          {token ? (
+            token.icon ? (
+              <Image
+                width={32}
+                height={32}
+                className="w-7 h-7 rounded-full"
+                src={token.icon}
+                alt="icon"
+              />
+            ) : (
+              <div
+                className="w-7 h-7 rounded-full flex items-center justify-center text-white font-bold"
+                style={{ backgroundColor: stringToColor(token.symbol) }}
+              >
+                {token.symbol.charAt(0)}
+              </div>
+            )
+          ) : (
+            <div className="w-7 h-7 rounded-full bg-slate-600" />
+          )}
           <span className="mx-2 font-bold">{token?.symbol}</span>
         </button>
       </div>
